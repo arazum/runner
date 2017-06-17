@@ -1,5 +1,7 @@
 # runner.py
 
+A simple python script for running blocking jobs one after another.
+
 ## Installation
 
 To install just run:
