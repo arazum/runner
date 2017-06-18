@@ -76,7 +76,7 @@ def command_list(args):
         dt = arrow.get(job['time']).humanize()
 
         print ('[{} / {}] {} ({})'.format(i + 1, len(jobs), dt, job['cwd']))
-        print ('{} {}\n'.format(job['command'], job['args']))
+        print ('{} {}\n'.format(job['command'], ' '.join(job['args'])))
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='''Run blocking jobs. When a job is ran its environment is taken from the host process (run subcommand) and working directory from where the job was added (add subcommand).''')
