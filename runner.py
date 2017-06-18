@@ -41,9 +41,11 @@ def command_run(args):
             cwd = job['cwd']
             dt = arrow.get(job['time']).humanize()
 
-            print ('Running job:')
-            print ('{} ({})'.format(dt, cwd))
-            print ('{} {}\n\n'.format(command, arguments))
+            print ('----------')
+            print ('Running job sumbitted {}.\nWorking directory: {}\n'.format(dt, cwd))
+            print ('{} {}'.format(command, ' '.join(arguments)))
+            print ('----------')
+            print ('\n\n')
             
             cmd = [command] + arguments
             subprocess.call(cmd, cwd=cwd)
